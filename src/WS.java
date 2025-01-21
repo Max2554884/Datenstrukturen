@@ -1,37 +1,48 @@
-public class WS {public class Kunde {
-    private String name;       // Name des Kunden
-    private Kunde nachfolger;  // nächster Kunden
+public class WS {
+    private Kunde erster;  // Gib den ersten Kunden in der Warteschlange an
 
-    // Standardkonstruktor
-    public Kunde() {
-        name = "";
-        nachfolger = null;
+    // Konstruktor
+    public Warteschlange() {
+        erster = null;
     }
 
-    //
-    public Kunde(String pName) {
-        name = pName;
-        nachfolger = null;
+    // Rückgabe des ersten Kunden
+    public Kunde getErsten() {
+        return erster;
     }
 
-    // Setzen des Nachfolgers
-    public void setNachfolger(Kunde pKunde) {
-        nachfolger = pKunde;
+    // Setzen des ersten Kunden
+    public void setErsten(Kunde pKunde) {
+        erster = pKunde;
     }
 
-    // Rückgabe des Nachfolgers
-    public Kunde getNachfolger() {
-        return nachfolger;
+    // Hinzufügen eines Kunden am Ende der Warteschlange
+    public void einfuegen(Kunde pKunde) {
+        if (erster == null) {
+            // Wenn die Warteschlange leer ist, wird der Kunde der erste
+            erster = pKunde;
+        } else {
+            // Sonst zum letzten Kunden führenund den neuen anhängen
+            Kunde aktueller = erster;
+
+            while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
+                aktueller = aktueller.getNachfolger(); // Nchfolger wird zu aktueller
+            }
+            aktueller.setNachfolger(pKunde); // Mit aktueller.setNachfolger(pKunde) wird der neue Kunde (pKunde) als Nachfolger des letzten Kunden gesetzt.
+        }
     }
 
-    // Setzen des Namens
-    public void setName(String pName) {
-        name = pName;
+    // Entfernen des ersten Kunden aus der Warteschlange
+    public void entfernen() {
+        if (erster != null) {
+            // Der Nachfolger des ersten Kunden wird der neue erste
+            erster = erster.getNachfolger();
+        }
     }
 
-    // Rückgabe des Namens
-    public String getName() {
-        return name;
+    // Überprüfen, ob die Warteschlange leer ist
+    public boolean gibLeer() {
+        return erster == null;
     }
-}
+
 }
