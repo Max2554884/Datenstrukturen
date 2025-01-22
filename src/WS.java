@@ -1,29 +1,29 @@
 public class WS {
-    private Kunde erster;  // Gib den ersten Kunden in der Warteschlange an
+    private kunde erster;  // Gib den ersten Kunden in der Warteschlange an
 
     // Konstruktor
-    public Warteschlange() {
+    public class Warteschlange() {
         erster = null;
     }
 
     // Rückgabe des ersten Kunden
-    public Kunde getErsten() {
+    public kunde getErsten() {
         return erster;
     }
 
     // Setzen des ersten Kunden
-    public void setErsten(Kunde pKunde) {
+    public void setErsten(kunde pKunde) {
         erster = pKunde;
     }
 
     // Hinzufügen eines Kunden am Ende der Warteschlange
-    public void einfuegen(Kunde pKunde) {
+    public void einfuegen(kunde pKunde) {
         if (erster == null) {
             // Wenn die Warteschlange leer ist, wird der Kunde der erste
             erster = pKunde;
         } else {
             // Sonst zum letzten Kunden führenund den neuen anhängen
-            Kunde aktueller = erster;
+            kunde aktueller = erster;
 
             while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
                 aktueller = aktueller.getNachfolger(); // Nchfolger wird zu aktueller

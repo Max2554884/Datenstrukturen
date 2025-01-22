@@ -7,13 +7,13 @@ public class Verwaltung {
 
         public static void main(String[] args) {
 
-            new verwaltung();
+            new Verwaltung();
             System.out.println("Herzlich willkommen zu Zeichenketten verschluesselerer!");
 
         }
         public verwaltung(){
             scanner = new Scanner(System.in);
-            WS warteschlange= new warteschlange();
+            WS warteschlange= new WS warteschlange();
             while (true) {
                 System.out.println("== HAUPTMENÜ ==");
                 System.out.println("[1]Hinzufuegen");
@@ -23,7 +23,7 @@ public class Verwaltung {
                     System.out.println("Wie viele?");
                     option = scanner.nextInt();
                     for (int i=0;i<option;i++){
-                        warteschlange.einfuegen(new Kunde(""+i));
+                        warteschlange.einfuegen(new kunde("++i"));
 
                     }
                 }else if (option==2){
