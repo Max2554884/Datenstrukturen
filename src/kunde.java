@@ -1,37 +1,36 @@
-public class kunde {
-    private String name;       // Name des Kunden
-    private Kunde nachfolger;  // nächster Kunden
+import java.util.Scanner;
 
-    // Standardkonstruktor
-    public Kunde() {
-        name = "";
-        nachfolger = null;
+
+
+public class Verwaltung {
+    private Scanner scanner;
+
+    public static void main(String[] args) {
+
+        new Verwaltung();
+        System.out.println("Herzlich willkommen zu Zeichenketten verschluesselerer!");
+
     }
+    public Verwaltung(){
+        scanner = new Scanner(System.in);
+        warteschlange warteschlange= new warteschlange();
+        while (true) {
+            System.out.println("== HAUPTMENÜ ==");
+            System.out.println("[1]Hinzufuegen");
+            System.out.println("[2]Ersten Auslesen");
+            int option = scanner.nextInt();
+            if(option==1) {
+                System.out.println("Wie viele?");
+                option = scanner.nextInt();
+                for (int i=0;i<option;i++){
+                    warteschlange.einfuegen(new Kunde(""+i));
 
-    //
-    public Kunde(String pName) {
-        name = pName;
-        nachfolger = null;
-    }
+                }
+            }else if (option==2){
+                System.out.println( warteschlange.getErsten());
+                warteschlange.entfernen();
+            }
 
-    // Setzen des Nachfolgers
-    public void setNachfolger(Kunde pKunde) {
-        nachfolger = pKunde;
-    }
-
-    // Rückgabe des Nachfolgers
-    public Kunde getNachfolger() {
-        return nachfolger;
-    }
-
-    // Setzen des Namens
-    public void setName(String pName) {
-        name = pName;
-    }
-
-    // Rückgabe des Namens
-    public String getName() {
-        return name;
+        }
     }
 }
-
