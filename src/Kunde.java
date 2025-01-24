@@ -1,18 +1,16 @@
  public class Kunde {
     private String name;       // Name des Kunden
     private Kunde nachfolger;  // nächster Kunden
-
+    private Kunde letzter;
     // Standardkonstruktor
-    public Kunde() {
+    public Kunde(String pName) {
         name = "";
         nachfolger = null;
+        letzter = null;
     }
 
     //
-    public Kunde(String pName) {
-        name = pName;
-        nachfolger = null;
-    }
+
 
     // Setzen des Nachfolgers
     public void setNachfolger(Kunde pKunde) {

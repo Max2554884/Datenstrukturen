@@ -1,19 +1,23 @@
-public class Knoten {
+public class Knoten<T> {
     private T zeigeAuf;                             //Speichert das Objekt auf welches der Knoten zeigt
     private Knoten nachfolger;                      //Speichert den nachfolgenden Knoten
 
-    public Knoten(T pZeigeAuf){
+    public Knoten(T pZeigeAuf)
+    {
         zeigeAuf = pZeigeAuf;
     }
-    public Knoten getNachfolger(){
+    public Knoten getNachfolger()
+    {
         return nachfolger;
     }
-    public void setNachfolger(Knoten pNachfolger){
+    public void setNachfolger(Knoten pNachfolger)
+    {
         this.nachfolger = pNachfolger;
     }
-    public T getZeigeAuf(){
+    public T getZeigeAuf()
+    {
         return zeigeAuf;
     }
 }
 
-}
+
