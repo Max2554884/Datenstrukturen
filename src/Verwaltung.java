@@ -23,7 +23,7 @@ public class Verwaltung {
                 System.out.println("Wie viele?");
                 option = scanner.nextInt();
                 for (int i=0;i<option;i++){
-                    warteschlange.einfuegen(new Kunde(""+i));
+                    warteschlange.einfuegen(new Knoten(""+i));
 
                 }
             }else if (option==2){
