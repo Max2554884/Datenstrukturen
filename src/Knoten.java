@@ -5,6 +5,7 @@ public class Knoten<T> {
     public Knoten(T pZeigeAuf)
     {
         zeigeAuf = pZeigeAuf;
+        nachfolger = null;
     }
     public Knoten getNachfolger()
     {

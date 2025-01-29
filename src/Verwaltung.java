@@ -20,14 +20,17 @@ public class Verwaltung {
             System.out.println("[2]Ersten Auslesen");
             int option = scanner.nextInt();
             if(option==1) {
-                System.out.println("Wie viele?");
+                System.out.println("Wie");
                 option = scanner.nextInt();
-                for (int i=0;i<option;i++){
-                    warteschlange.einfuegen(new Knoten(""+i));
+                //for (int i=0;i<option;i++){
+                  //  warteschlange.einfuegen(new Knoten(""+i));
 
-                }
+                //}
+                Kunde hilf = new Kunde("Hase");
+                warteschlange.einfuegen(hilf);
             }else if (option==2){
-                System.out.println( warteschlange.getErsten());
+                Kunde hilfe = (Kunde)warteschlange.getErsten();
+                System.out.println(hilfe.getName());
                 warteschlange.entfernen();
             }
 

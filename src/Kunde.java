@@ -4,24 +4,8 @@
     private Kunde letzter;
     // Standardkonstruktor
     public Kunde(String pName) {
-        name = "";
-        nachfolger = null;
-        letzter = null;
+        name = pName;
     }
-
-    //
-
-
-    // Setzen des Nachfolgers
-    public void setNachfolger(Kunde pKunde) {
-        nachfolger = pKunde;
-    }
-
-    // Rückgabe des Nachfolgers
-    public Kunde getNachfolger() {
-        return nachfolger;
-    }
-
     // Setzen des Namens
     public void setName(String pName) {
         name = pName;
