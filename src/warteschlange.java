@@ -1,6 +1,6 @@
 public class warteschlange {
     private Kunde erster;  // Gib den ersten Kunden in der Warteschlange an
-    private Knoten  erster;
+    private Knoten  T ;
 
     // Konstruktor
     public warteschlange() {
