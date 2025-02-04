@@ -1,18 +1,26 @@
-import jdk.jfr.ContentType;
 
-public class List {
+public class List <ContentType> {
     public List()
     {
+        public ContentType First
+
+        public ContentType last
+
+        public ContentType current
+
+        private Node First
+
 
     }
-    public void append(ContentType pC){
+    public void append(ContentType pC)
+    {
        Node hilfe = new Node(pInhalt);
-        if (erster == null) {
+        if (First == null) {
             // Wenn die Warteschlange leer ist, wird der Kunde der erste
-            erster = hilfe;
+            First = hilfe;
         } else {
             // Sonst zum letzten Kunden führen und den neuen anhängen
-            Node aktueller = erster;
+            Node aktueller = First;
 
             while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
                 aktueller = aktueller.getNachfolger(); // Nachfolger wird zu aktueller
