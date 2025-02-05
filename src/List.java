@@ -1,26 +1,28 @@
+public class List <ContentType>
+     {
 
-public class List <ContentType> {
-    public List()
-    {
-        public ContentType First
 
-        public ContentType last
+        public ContentType First;
 
-        public ContentType current
+        public ContentType last;
 
-        private Node First
+        public ContentType current;
+
+        private Node erster;
+
+        public List(){
 
 
     }
     public void append(ContentType pC)
     {
-       Node hilfe = new Node(pInhalt);
-        if (First == null) {
+       Node hilfe = new Node(pC);
+        if (erster == null) {
             // Wenn die Warteschlange leer ist, wird der Kunde der erste
-            First = hilfe;
+            erster = (Node) hilfe;
         } else {
             // Sonst zum letzten Kunden führen und den neuen anhängen
-            Node aktueller = First;
+            Node aktueller = erster;
 
             while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
                 aktueller = aktueller.getNachfolger(); // Nachfolger wird zu aktueller
