@@ -31,34 +31,38 @@ public class List <ContentType>
             }
             aktueller.setNachfolger(hilfe); // Mit aktueller.setNachfolger(pKunde) wird der neue Kunde (pKunde) als Nachfolger des letzten Kunden gesetzt.
         }
-    }
-    }
-    public void next(){
+    }public void next(){
 
-    }
-    public void insert(ContentType pC){
+     }
+         public void insert(ContentType pC){
 
-    }
-    public void toFirst(){
-      if (erster != null){
-      erster = hilfe
-      } else if (erster = null) {
+         }
+         public void toFirst(){
+             if (first != null){
+                 first= hilfe;
+             }
+             else {
+                 if (first == null)
+                     fist = ;
 
-      }
-    }
-    public void toLast(){
 
-    }
-    public void remove(){
+             }
+         }
+         public void toLast(){
 
-    }
-      public boolean hasAccess (){
+         }
+         public void remove(){
 
-    }
-      public ContentType getContent(){
+         }
+         public boolean hasAccess (){
 
-    }
-      public void setContent(ContentType pC){
+         }
+         public ContentType getContent(){
 
-      }
-}
+         }
+         public void setContent(ContentType pC){
+
+         }
+     }
+
+

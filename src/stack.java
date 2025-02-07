@@ -6,12 +6,12 @@ public class stack <E>
 }
     public void einfuegen(E pInhalt) {
         Knoten hilfe = new Knoten(pInhalt);
-        if (erster == null) {
+        if (first == null) {
             // Wenn die Warteschlange leer ist, wird der Kunde der erste
-            erster = hilfe;
+            first = hilfe;
         } else {
             // Sonst zum letzten Kunden führen und den neuen anhängen
-            Knoten aktueller = erster;
+            Knoten aktueller = first;
 
             while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
                 aktueller = aktueller.getNachfolger(); // Nachfolger wird zu aktueller
