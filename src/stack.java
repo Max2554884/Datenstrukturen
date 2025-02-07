@@ -1,9 +1,9 @@
-public class stack <E>
-{
-  public E getContent(){
+public class stack <E> {
+    public E getContent() {
 
-      return null;
-}
+        return null;
+    }
+
     public void einfuegen(E pInhalt) {
         Knoten hilfe = new Knoten(pInhalt);
         if (first == null) {
@@ -20,10 +20,13 @@ public class stack <E>
         }
     }
 
-public void remove(){
-
+ if (first== null) {// Wenn der Stapel leer ist, wird null zurückgegebe
+    return null;
 }
-public boolean isEmpty (){
+    E content = first.getContent();// Inhalt des obersten Elements
+   first = first.getNextNode();// Setzt das nächste Element als oberstes
+    return content; // Gibt den entfernten Inhalt zurück
+}
+public boolean isEmpty(){
     return false;
-}
 }
