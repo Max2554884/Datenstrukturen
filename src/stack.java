@@ -11,6 +11,7 @@ public class stack <E> {
             first = hilfe;
         } else {
             // Sonst zum letzten Kunden führen und den neuen anhängen
+            
             Knoten aktueller = first;
 
             while (aktueller.getNachfolger() != null) {  // Schleife läuft so lange, wie es einen Nachfolger gibt
