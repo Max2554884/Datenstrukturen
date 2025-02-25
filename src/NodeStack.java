@@ -1,23 +1,30 @@
-public class NodeStack <E> {
+public class NodeStack<T> {
+    private T content;  // Der Inhalt des Knotens
+    private NodeStack<T> nextKnoten;  // Verweis auf den nächsten Knoten
 
-    public NodeStack(E pContent) {
-
+    // Konstruktor, um den Inhalt des Knotens zu setzen
+    public NodeStack(T pContent) {
+        this.content = pContent;
+        this.nextNode = null;  // Der nächste Knoten ist zu Beginn null
     }
 
-    public E getContent() {
-        return null;
+    // Getter für den Inhalt des Knotens
+    public T getContent() {
+        return content;
     }
 
-    public void setContent(E pContent) {
-
+    // Setter für den Inhalt des Knotens
+    public void setContent(T pContent) {
+        this.content = pContent;
     }
 
-    public NodeStack getNextNode() {
-        return null;
+    // Getter für den nächsten Knoten
+    public NodeStack<T> getNextNode() {
+        return nextNode;
     }
 
-    public void  setNextNode(NodeStack nextNode) {
-
-
+    // Setter für den nächsten Knoten
+    public void setNextNode(NodeStack<T> nextKnoten) {
+        this.nextNode = nextKnoten;
     }
 }

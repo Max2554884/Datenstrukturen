@@ -1,4 +1,5 @@
 public class stack <E> {
+    private NodeStack first;
     public E getContent() {
 
         return null;
